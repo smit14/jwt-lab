@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Lab to understand JWT",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -21,5 +22,11 @@
   "bugs": {
     "url": "https://github.com/smit14/jwt-lab/issues"
   },
-  "homepage": "https://github.com/smit14/jwt-lab#readme"
+  "homepage": "https://github.com/smit14/jwt-lab#readme",
+  "dependencies": {
+    "crypto": "^1.0.1"
+  },
+  "bin": {
+    "run": "index.js"
+  }
 }
