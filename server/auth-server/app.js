@@ -11,6 +11,11 @@ app.use(cors());
 // In-memory data structure to store user data
 const users = [];
 
+const createJwt = (user) => {
+  // TODO: Implement
+  return ""
+}
+
 // Sign-up endpoint
 app.post('/sign-up', (req, res) => {
   const { username, password } = req.body;
@@ -36,8 +41,11 @@ app.post('/sign-in', (req, res) => {
   // Check if the username and password match
   const user = users.find(user => user.username === username && user.password === password);
 
+  // create jwt
+  const jwt = createJwt(user)
+
   if (user) {
-    return res.status(200).json({ message: 'Sign-in successful' });
+    return res.status(200).json({ jwt: jwt });
   } else {
     return res.status(401).json({ message: 'Invalid username or password' });
   }
