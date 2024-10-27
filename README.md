@@ -3,6 +3,9 @@
 Link to article
 https://medium.com/@thakkarsmit/how-jwt-enables-password-less-authentication-870ada4f1e45
 
+# Architecture
+![](assets/architecture.png)
+
 # Setup
 Install **Node.js**
 
